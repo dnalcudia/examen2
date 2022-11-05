@@ -432,7 +432,7 @@ MonoBehaviour:
   aim: {fileID: 727122238}
   camera: {fileID: 519420031}
   bulletPrefab: {fileID: 6667706165611721048, guid: c5e7d03d9bbb84f41af3349c417d011b, type: 3}
-  fireRate: 1
+  fireRate: 3
   health: 3
   hearts:
   - {fileID: 100653023}
@@ -965,7 +965,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: f2970f2a14f1340bd94db54a278b0765, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

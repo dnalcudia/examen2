@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        
+        
+	    Cursor.visible = false;
     }
 
     private void Start()
@@ -30,7 +33,6 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             time--;
         }
-
         // Game Over
     }
 }
