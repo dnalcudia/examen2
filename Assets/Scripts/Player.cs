@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -26,7 +27,10 @@ public class Player : MonoBehaviour
     float fireRate = 1;
 
     [SerializeField]
-    int health = 1;
+    int health = 3;
+
+    [SerializeField]
+    RawImage[] hearts;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RenderHealth (health);
+
         transform.position += moveDirection * Time.deltaTime * speed;
 
         //  Movimiento de la mira
@@ -70,5 +76,21 @@ public class Player : MonoBehaviour
     public void TakeDamage()
     {
         health--;
+    }
+
+    public void RenderHealth(int health)
+    {
+        switch (health)
+        {
+            case 0:
+                hearts[0].GetComponent<RawImage>().enabled = false;
+                break;
+            case 1:
+                hearts[1].GetComponent<RawImage>().enabled = false;
+                break;
+            case 2:
+                hearts[2].GetComponent<RawImage>().enabled = false;
+                break;
+        }
     }
 }
