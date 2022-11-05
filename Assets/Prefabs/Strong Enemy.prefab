@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   speed: 1
+  deathSoundEffect: {fileID: 8300000, guid: 0d7455b1d8d2f48a8bf7abdbba64d033, type: 3}
 --- !u!61 &5382177758066455506
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     RawImage[] hearts;
 
+    [SerializeField]
+    private AudioSource laserSoundEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +64,7 @@ public class Player : MonoBehaviour
                 Mathf.Rad2Deg; // Ángulo rotación entre mira y player (grados)
             Quaternion targetRotation =
                 Quaternion.AngleAxis(angle, Vector3.forward);
+            laserSoundEffect.Play();
             Instantiate(bulletPrefab, transform.position, targetRotation);
 
             StartCoroutine(ReloadGun());

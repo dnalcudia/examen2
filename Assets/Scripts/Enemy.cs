@@ -12,6 +12,9 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     float speed = 1;
 
+    [SerializeField]
+    private AudioClip deathSoundEffect;
+
     private void Start()
     {
         player = FindObjectOfType<Player>().transform;
@@ -28,6 +31,7 @@ public class Enemy : MonoBehaviour
 
         if (health == 0)
         {
+            AudioSource.PlayClipAtPoint(deathSoundEffect, transform.position);
             Destroy (gameObject);
         }
     }
