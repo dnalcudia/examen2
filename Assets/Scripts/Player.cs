@@ -42,10 +42,10 @@ public class Player : MonoBehaviour
         RenderHealth (health);
 
         transform.position += moveDirection * Time.deltaTime * speed;
-
-
 	    Mira();
 	    Disparar();
+	    
+	    HealthValidation();
     }
     
     
@@ -107,4 +107,12 @@ public class Player : MonoBehaviour
                 break;
         }
     }
+	
+	void HealthValidation()
+	{
+		if (health >= 0)
+		{
+			Application.LoadLevel("LoseScreen");
+		}
+	}
 }
