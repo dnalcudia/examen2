@@ -43,6 +43,7 @@
      <Compile Include="Assets/Scripts/Bullet.cs" />
      <Compile Include="Assets/Scripts/GameManager.cs" />
      <Compile Include="Assets/Scripts/Player.cs" />
+     <Compile Include="Assets/Scripts/CameraMovement.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2021.3.8f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -772,11 +773,17 @@
     <Reference Include="Unity.2D.IK.Runtime">
         <HintPath>/Users/angeldanielalcudia/Documents/Documents/Unity/Examen2/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+        <HintPath>/Users/angeldanielalcudia/Documents/Documents/Unity/Examen2/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
         <HintPath>/Users/angeldanielalcudia/Documents/Documents/Unity/Examen2/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Burst">
         <HintPath>/Users/angeldanielalcudia/Documents/Documents/Unity/Examen2/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+        <HintPath>/Users/angeldanielalcudia/Documents/Documents/Unity/Examen2/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
         <HintPath>/Users/angeldanielalcudia/Documents/Documents/Unity/Examen2/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
