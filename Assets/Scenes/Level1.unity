@@ -1471,6 +1471,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 519420031}
+  firstLevelMusic: {fileID: 8300000, guid: ef59df3a7bd2b4add9e7333ed3a97bff, type: 3}
+  secondLevelMusic: {fileID: 8300000, guid: da723cfc8dc624ccfa48761967a560bd, type: 3}
+  thirdLevelMusic: {fileID: 8300000, guid: 7b085e025ceae47d18da87125fc7e071, type: 3}
 --- !u!1 &344587584
 GameObject:
   m_ObjectHideFlags: 0
