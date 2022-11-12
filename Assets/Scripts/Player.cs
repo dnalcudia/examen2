@@ -110,8 +110,9 @@ public class Player : MonoBehaviour
 	
 	void HealthValidation()
 	{
-		if (health >= 0)
+		if (health <= 0)
 		{
+			Debug.Log("Health Validation");
 			Application.LoadLevel("LoseScreen");
 		}
 	}
