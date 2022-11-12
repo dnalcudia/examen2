@@ -2063,6 +2063,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KillCounter: 0
   TKC: {fileID: 481538271}
+  Door1: {fileID: 846185850}
+  Door2: {fileID: 1464151623}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3806,7 +3808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &846185851
 Transform:
   m_ObjectHideFlags: 0
@@ -5996,7 +5998,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1464151624
 Transform:
   m_ObjectHideFlags: 0
