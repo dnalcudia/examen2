@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-
+	public static GameManager Instance;
+	public GameObject menu;
     public int time = 30;
-
     public int difficulty = 1;
-	
-	private static bool gameIsPaused;
+	public bool gameIsPaused, isShowing;
 
 	private void Awake()
     
@@ -37,11 +35,12 @@ public class GameManager : MonoBehaviour
     }
     
 	
-	void PauseGame ()
+	public void PauseGame ()
 	{
 		if(gameIsPaused)
 		{
 			Time.timeScale = 0f;
+			
 		}
 		else 
 		{
@@ -53,6 +52,9 @@ public class GameManager : MonoBehaviour
 	{
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
+			isShowing = !isShowing;
+			menu.SetActive(isShowing);
+			
 			gameIsPaused = !gameIsPaused;
 			PauseGame();
 		}
@@ -60,7 +62,7 @@ public class GameManager : MonoBehaviour
 	
 	void Update()
 	{
-		PauseGame();
+		PauseLogic();
 	}
     
 }

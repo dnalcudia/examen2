@@ -7,9 +7,18 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
 	
+	public GameObject menu;
+	public GameManager GM;
+	
 	public void MainMenu()
 	{
 		SceneManager.LoadScene("StartScreen");
+	}
+	
+	public void Resume()
+	{
+		Time.timeScale = 1;
+		menu.SetActive(!GM.isShowing);
 	}
 	
 	public void StartGame()

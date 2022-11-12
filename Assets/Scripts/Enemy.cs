@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,14 +6,14 @@ public class Enemy : MonoBehaviour
 {
     Transform player;
 
-    [SerializeField]
     public int health = 1;
 
     [SerializeField]
     float speed = 1;
 
     [SerializeField]
-    private AudioClip deathSoundEffect;
+	private AudioClip deathSoundEffect;
+
 
     private void Start()
     {
@@ -21,7 +21,8 @@ public class Enemy : MonoBehaviour
         GameObject[] spawnPoints =
             GameObject.FindGameObjectsWithTag("SpawnPoint");
         int randomSpawnPoint = Random.Range(0, spawnPoints.Length);
-        transform.position = spawnPoints[randomSpawnPoint].transform.position;
+	    transform.position = spawnPoints[randomSpawnPoint].transform.position;
+        
     }
 
     private void Update()
@@ -31,11 +32,12 @@ public class Enemy : MonoBehaviour
 
         if (health == 0)
         {
-            AudioSource.PlayClipAtPoint(deathSoundEffect, transform.position);
-            Destroy (gameObject);
+	        AudioSource.PlayClipAtPoint(deathSoundEffect, transform.position);
+	        int go = GameObject.Find("KillCount").GetComponent<KillCount>().KillCounter++;
+	        Destroy (gameObject);
         }
     }
-
+	
     public void TakeDamage()
     {
         health--;
