@@ -6,6 +6,10 @@ TagManager:
   tags:
   - SpawnPoint
   - Enemy
+  - Door
+  - Area2
+  - Area3
+  - Area1
   layers:
   - Default
   - TransparentFX
